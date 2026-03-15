@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "MilkMan Revenge",
+  "version": "1.0",
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "host_permissions": [
+    "https://raw.githubusercontent.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["my_mom.mp3"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ]
+}
